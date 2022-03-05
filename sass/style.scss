@@ -1,0 +1,111 @@
+$mainColor1: #afa40a;
+$mainColor2: #979797;
+
+* {
+  box-sizing: border-box;
+}
+
+
+.stopwatch {
+  max-width: 1200px;
+  margin: 0 auto;
+};
+
+.container {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 150px;
+  
+}
+.timer {
+  display: flex;
+  justify-content: space-between;
+  &__block {
+    width: 150px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    .time {
+      display: flex;
+      height: 150px;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.15);
+      color: rgb(122, 112, 112);
+      font-size: 150px;
+    }
+    .title {
+      box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.15);
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      text-align: center;
+      color:rgb(34, 31, 31);
+    }
+
+  }
+}
+
+.results {
+  display: none;
+  max-width: 100%;
+  min-height: 200px;
+  box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  margin-top: 30px;
+  &__title {
+    & > p {
+      margin: 0;
+      font-size: 40px;
+      text-align: center;
+      color: rgb(182, 182, 182);
+      border-bottom: 1px solid rgb(182, 182, 182);
+    }
+  }
+  &__time {
+    font-weight: normal;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+    text-align: left;
+    line-height: 30px;
+    color: #7a7070;
+  }
+}
+
+.buttons {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 70px;
+  
+  .btn {
+    width: 150px;
+    height: 55px;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+    transition: 0.3s ease-in-out;
+    color: rgb(122, 112, 112);
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    &.start, &.new{
+      &:hover {
+        background-color: rgb(255, 255, 255);
+        color: black;
+      }
+    }
+    &.pause {
+      &:hover, &:focus {
+        background-color: rgb(255, 255, 255);
+        color: black;
+      }
+    }
+    &.stop {
+      &:hover {
+        background-color:rgba($color: #f88c8c, $alpha: 5.0);
+        color: white;
+      }
+    }
+  }
+}
